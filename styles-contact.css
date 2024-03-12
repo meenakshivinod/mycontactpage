@@ -68,13 +68,26 @@ html, body {
 }
 
 .center {
+	animation: fadeInAnimation ease 3s;
+	animation-iteration-count: 1;
+	animation-fill-mode: forwards;
     width: 40%; /* ------ This is for responsiveness ------*/
-	min-width: 300px; /* ------ This is for responsiveness ------*/
+	min-width: 300px; /*------ This is for responsiveness ------*/
 	padding: 2%;
     margin: 100px auto;
  	background: rgba(173, 184, 222, .75); /*this uses opacity of 75% for the background color*/
 	text-align: center;
 	/*border: 4px dashed white;*/
+	border-radius: 50px 0px 50px 0px;
+}
+
+@keyframes fadeInAnimation {
+	0%{
+		opacity: 0;
+	}
+	100%{
+		opacity: 1;
+	}
 }
 
    
@@ -149,4 +162,15 @@ a:hover{
 	color: #040827;
 	background: rgb(165, 181, 233);
 	letter-spacing: .15em; /* spaces letters when hovered */
+	box-shadow: 5px 5px #19225b;
+	-webkit-transform: translate(-3px);
+	transform: translateX(-3px);
+}
+
+.tab-content{
+	display:none;
+}
+
+.tab-content:target{
+	display: block;
 }
